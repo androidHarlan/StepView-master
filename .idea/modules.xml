@@ -5,9 +5,7 @@
       <module fileurl="file://G:\android\StepView-master\StepView.iml" filepath="G:\android\StepView-master\StepView.iml" />
       <module fileurl="file://$PROJECT_DIR$/StepView-master.iml" filepath="$PROJECT_DIR$/StepView-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://G:\android\StepView-master\app\app.iml" filepath="G:\android\StepView-master\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/stepview/stepview.iml" filepath="$PROJECT_DIR$/stepview/stepview.iml" />
-      <module fileurl="file://G:\android\StepView-master\stepview\stepview.iml" filepath="G:\android\StepView-master\stepview\stepview.iml" />
     </modules>
   </component>
 </project>

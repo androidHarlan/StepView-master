@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.baoyachi.stepview.utils.SpannableStringUtil;
+
 import java.util.List;
 
 /**
@@ -31,21 +33,25 @@ public class VerticalStepView extends LinearLayout implements VerticalStepViewIn
 
     private int mTextSize = 14;//default textSize
     private TextView mTextView;
+    private Context context;
 
 
     public VerticalStepView(Context context)
     {
         this(context, null);
+        this.context=context;
     }
 
     public VerticalStepView(Context context, AttributeSet attrs)
     {
         this(context, attrs, 0);
+        this.context=context;
     }
 
     public VerticalStepView(Context context, AttributeSet attrs, int defStyleAttr)
     {
         super(context, attrs, defStyleAttr);
+        this.context=context;
         init();
     }
 
@@ -227,7 +233,9 @@ public class VerticalStepView extends LinearLayout implements VerticalStepViewIn
                 {
                     mTextView = new TextView(getContext());
                     mTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, mTextSize);
-                    mTextView.setText(mTexts.get(i));
+                    /*mTextView.setText(mTexts.get(i));*/
+                    mTextView.setText(SpannableStringUtil.zhuanHuanTelUrl(context,mTexts.get(i)));
+                    SpannableStringUtil.setTelUrl(context,mTextView,mTextView.getText().toString());
                     mTextView.setY(complectedXPosition.get(i) - mStepsViewIndicator.getCircleRadius() / 2);
                     mTextView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
